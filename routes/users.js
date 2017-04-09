@@ -37,7 +37,7 @@ router.post('/register', upload.single('profileimage'), function(req, res, next)
   req.checkBody('email', 'Email field is required').isEmail();
   req.checkBody('username', 'Username field is required').notEmpty();
   req.checkBody('password', 'Password field is required').notEmpty();
-  req.checkBody('password2', 'Password do not match').equals('req.body.password');
+  req.checkBody('password2', 'Passwords do not match').equals('req.body.password');
 
   // check errors
   var errors = req.validationErrors();
