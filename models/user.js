@@ -49,5 +49,4 @@ module.exports.createUser = function (newUser, callback) {
       newUser.save(callback);
     });
   });
-  
 };
